@@ -55,3 +55,4 @@ declare module "@wumpjs/plugins" {
 
   export type TypeResult = ("string" | "object" | "array" | "symbol" | "null" | "boolean" | "bigint" | "number" | "function") | ("String" | "Object" | "Array" | "Symbol" | "Null" | "Boolean" | "Bigint" | "Number" | "Function");
 }
+
