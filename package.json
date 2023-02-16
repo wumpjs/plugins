@@ -1,0 +1,21 @@
+{
+  "name": "@wumpjs/plugins",
+  "version": "1.0.0",
+  "description": "Additional tools for WumpJS packages.",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/global.d.ts",
+  "scripts": {
+    "start": "node src/index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colorette": "^2.0.19",
+    "typed-emitter": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0"
+  }
+}
