@@ -1,0 +1,56 @@
+import EventEmitter from "node:events"
+
+
+
+class ExtendedEventEmitter extends EventEmitter{
+    constructor(){
+        super()
+        this.emittedEventNames()
+        this.eventNames()
+    }
+    /**
+     * 
+     * @returns {any[]}
+     */
+    emittedEventNames(){
+        return []
+    }
+    /**
+     * 
+     * @returns {any[]}
+     */
+    emittedEvents(){
+        return []
+    }
+    /**
+     * 
+     * @param {string | symbol} eventName 
+     * @returns 
+     */
+    hasListener(eventName){
+        return super.eventNames().some((e) => e === eventName)
+    }
+    /**
+     * 
+     * @param {string | symbol} eventName 
+     * @returns 
+     */
+    emit(eventName, ...args){
+        this.emittedEventNames.push(event)
+        this.emittedEvents.push({
+            eventName,
+            args: args
+        })
+        return super.emit(eventName, ...args)
+    }
+    /**
+     * 
+     * @param {string | symbol} eventName 
+     * @returns 
+     */
+    hasEmit(eventName){
+        return this.emittedEventNames.some(eName => eName === eventName)
+    }
+}
+
+export default ExtendedEventEmitter
