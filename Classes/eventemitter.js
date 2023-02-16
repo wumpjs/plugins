@@ -36,6 +36,7 @@ class EventEmitter extends EE{
      * @returns 
      */
     emit(eventName, ...args){
+        if(!eventName) throw new Error("Event Name is required for action.")
         this.emittedEventNames.push(event)
         this.emittedEvents.push({
             eventName,
