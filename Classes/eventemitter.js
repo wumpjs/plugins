@@ -1,8 +1,8 @@
-import EventEmitter from "node:events"
+import EE from "node:events"
 
 
 
-class ExtendedEventEmitter extends EventEmitter{
+class EventEmitter extends EE{
     constructor(){
         super()
         this.emittedEventNames()
